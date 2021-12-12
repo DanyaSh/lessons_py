@@ -23,9 +23,9 @@ class TriangleChecker():
 
     def is_triangle(self):
         try:
-            self.side_a=int(self.side_a)
-            self.side_b=int(self.side_b)
-            self.side_c=int(self.side_c)
+            self.side_a=float(self.side_a)
+            self.side_b=float(self.side_b)
+            self.side_c=float(self.side_c)
             if self.side_a==0 or self.side_b==0 or self.side_c==0:
                 print('Нужно вводить только положительные числа!')
             elif self.side_a<0 or self.side_b<0 or self.side_c<0:
