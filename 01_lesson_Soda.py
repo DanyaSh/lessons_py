@@ -9,17 +9,17 @@ https://smartiqa.ru/python-workbook/class#1
 
 class Soda:
     
-    def __init__(self, additive=None):
-        if additive!='' and type(additive)==str:
-            self.additive=additive
+    def __init__(self, ingredient=None):
+        if ingredient!='' and type(ingredient)==str:
+            self.ingredient=ingredient
         else:
-            self.additive=None
+            self.ingredient=None
 
     def __str__(self):
-        if self.additive==None:
+        if self.ingredient==None:
             res='Обычная газировка'
         else:
-            res='Газировка и '+self.additive
+            res='Газировка и '+self.ingredient
         return(res)
     
     def show_my_drink(self):
@@ -27,17 +27,17 @@ class Soda:
 
 # Тест (3 примера)
 print('_____test_____')
-additive2='малина'
-additive3=5
+ingredient2='малина'
+ingredient3=5
 soda1=Soda()
-soda2=Soda(additive2)
-soda3=Soda(additive3)
+soda2=Soda(ingredient2)
+soda3=Soda(ingredient3)
 soda1.show_my_drink()
 soda2.show_my_drink()
 soda3.show_my_drink()
 print('_____end_test_____')
 
 # Тест (Ваша газировка)
-additive=input("Введите добавку и нажмите Enter...")
-soda=Soda(additive)
+ingredient=input("Введите добавку и нажмите Enter...")
+soda=Soda(ingredient)
 soda.show_my_drink()
